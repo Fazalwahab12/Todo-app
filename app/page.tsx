@@ -1,5 +1,5 @@
 "use client"
-import { Button, Flex, ListItem, UnorderedList, Text, Input } from '@chakra-ui/react'
+import { Button, Flex, ListItem, UnorderedList, Text, Input, Box,  } from '@chakra-ui/react'
 import { use, useState } from 'react'
 export default function Home() {
     const [tasks, setTasks] = useState(["1", "2", "3"])
@@ -19,7 +19,8 @@ export default function Home() {
         }
     }
     return (
-        <><h1>Todoapp</h1><Flex
+        <>
+        <h1>Todoapp</h1><Flex
             justifyContent="center"
             alignItems="center"
             width="100%"
@@ -43,7 +44,7 @@ export default function Home() {
                         {task}
                         <Button
                             ml={10}
-                            backgroundColor="black"
+                            backgroundColor="red"
 
                             color="#e7e7e7"
                             onClick={() => {
@@ -55,6 +56,8 @@ export default function Home() {
 
                     </ListItem>)
                 })}
-            </UnorderedList></>
+                
+            </UnorderedList> </>
+            
     )
 }
